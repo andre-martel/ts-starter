@@ -1,11 +1,11 @@
-import express, { Request, Response } from "express";
+import express, { Application } from "express";
+import morgan from "morgan";
+import { router } from "./character-router";
 
-const application = express();
+const application: Application = express();
 
-application.get("/", (_request: Request, response: Response) => {
-  return response.json({
-    message: "OK",
-  });
-});
+application.use(morgan("tiny"));
+
+application.use("/character", router);
 
 application.listen(3000, () => console.log("c'est good !"));
