@@ -1,13 +1,9 @@
 {
   "compilerOptions": {
     "incremental": true,
-    "target": "ES2023",
-    "lib": [
-      "es2023"
-    ],
-    "types": [
-      "@types/node"
-    ],
+    "target": "ES2022",
+    "lib": ["es2022"],
+    "types": ["@types/node"],
     "allowSyntheticDefaultImports": true,
     "module": "CommonJS",
     "declaration": true,
